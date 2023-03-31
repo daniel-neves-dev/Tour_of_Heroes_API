@@ -2,19 +2,16 @@ module Api
 class HeroesController < ApplicationController
   before_action :set_hero, only: %i[ show update destroy ]
 
-  # GET /heroes
   def index
-    @heroes = Hero.all
+    @heroes = Hero.search(params[:term]).sorted_by_name
 
     render json: @heroes
   end
 
-  # GET /heroes/1
   def show
     render json: @hero
   end
 
-  # POST /heroes
   def create
     @hero = Hero.new(hero_params)
 
@@ -25,7 +22,6 @@ class HeroesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /heroes/1
   def update
     if @hero.update(hero_params)
       render json: @hero
@@ -34,18 +30,16 @@ class HeroesController < ApplicationController
     end
   end
 
-  # DELETE /heroes/1
+
   def destroy
     @hero.destroy
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_hero
       @hero = Hero.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def hero_params
       params.require(:hero).permit(:name)
     end
