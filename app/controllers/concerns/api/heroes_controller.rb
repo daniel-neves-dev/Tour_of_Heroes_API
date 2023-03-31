@@ -1,3 +1,4 @@
+module Api
 class HeroesController < ApplicationController
   before_action :set_hero, only: %i[ show update destroy ]
 
@@ -18,7 +19,7 @@ class HeroesController < ApplicationController
     @hero = Hero.new(hero_params)
 
     if @hero.save
-      render json: @hero, status: :created, location: @hero
+      render json: @hero, status: :created, location: api_hero_url(@hero)
     else
       render json: @hero.errors, status: :unprocessable_entity
     end
@@ -48,4 +49,5 @@ class HeroesController < ApplicationController
     def hero_params
       params.require(:hero).permit(:name)
     end
+  end
 end
