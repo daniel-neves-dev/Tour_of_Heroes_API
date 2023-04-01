@@ -164,6 +164,115 @@
           null
         ]
       },
+      "/home/daniel/Desktop/cursos/Tour_of_Heroes/app/controllers/api/heroes_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/daniel/Desktop/cursos/Tour_of_Heroes/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/daniel/Desktop/cursos/Tour_of_Heroes/app/controllers/concerns/authentication.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/home/daniel/Desktop/cursos/Tour_of_Heroes/spec/models/hero_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          5,
+          1,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/home/daniel/Desktop/cursos/Tour_of_Heroes/app/models/hero.rb": {
         "lines": [
           1,
@@ -184,6 +293,6 @@
         ]
       }
     },
-    "timestamp": 1680370515
+    "timestamp": 1680374163
   }
 }
