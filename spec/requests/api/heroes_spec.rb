@@ -17,11 +17,21 @@ RSpec.describe "/api/heroes", type: :request do
   end
 
   describe "GET /index" do
-    it "renders a successful response" do
-      Hero.create! valid_attributes
-      get api_heroes_url, headers: valid_headers, as: :json
-      expect(response).to be_successful
+    context 'with headers' do
+      it "renders a successful response" do
+        Hero.create! valid_attributes
+        get api_heroes_url, headers: valid_headers, as: :json
+        expect(response).to be_successful
+      end
     end
+
+      context 'without headers' do
+        it "renders a JSON response an unauthorized status" do
+          Hero.create! valid_attributes
+          get api_heroes_url, as: :json
+          expect(response).to have_http_status(:unauthorized)
+        end
+      end
   end
 
   describe "GET /show" do
